@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://anseki.github.io/plain-draggable/js/libs-0c9dbba-210529120220.js"></script>
+  <script src="https://anseki.github.io/plain-draggable/js/bezier.min.js"></script>
+  <script src="https://anseki.github.io/plain-draggable/js/path-data-polyfill.js"></script>
+    <body style="background-color: gray">
+      
+      <div id="ex-010-stage" class="stage-s">
+        <div class="warn"></div>
+        <div class="left"></div><div class="frame"></div>
+        <div id="ex-010-draggable" class="draggable"></div>
+      </div>
+
+</body>
+
+<style>
+
+.draggable {
+  display: inline-block;
+  background-image: url(./문.png);
+  padding: 1px 3px;
+  font-weight: bold;
+  height : 500px;
+  width : 700px;
+  margin-left : 240px;
+}
+
+.left {
+  position: absolute;
+  background-image: url(./문배경.png);
+  background-color: #d4d4d4;
+  margin-bottom: 1em;
+  height: 500px;
+  width : 700px;
+}
+.warn {
+  position: absolute;
+  background-image: url(./주의문.png);
+  z-index: 2;
+  margin-bottom: 1em;
+  height: 500px;
+  width : 700px;
+  pointer-events: none;
+}
+.stage-s {
+  margin-bottom: 1em;
+  height: 400px;
+  width : 1119px;
+}
+
+.frame{    width: 700px;
+    height: 500px;
+    position: absolute;
+    pointer-events: none;
+    border: solid 300px gray;
+    transform: translate(-300px, -300px);
+    z-index: 7;}
+
+</style>
+<script>
+  window.addEventListener('load', function() {
+    'use strict';
+  
+    new PlainDraggable(document.getElementById('ex-010-draggable'));
+  
+  });
+  </script>
+</html>
