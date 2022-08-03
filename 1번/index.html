@@ -25,8 +25,8 @@ $('#대화1').css({visibility:'visible'}).animate({opacity:1}, 1000);
 <img src="./1.png" id="일" class="대화">
 <div  class="선택지"  id="선택지1" style="    top: 315px;
 left: 357px;"
-onclick="$('#대화1').css({visibility:'hidden'}).animate({opacity:0}, 1000);
-$('#대화2').css({opacity:0, visibility:'visible'}).animate({opacity:1}, 1000);
+onclick="$('#일').css({visibility:'hidden'}).animate({opacity:0}, 1000);
+$('#선택지1').css({visibility:'hidden'}).animate({opacity:0}, 1000);
 $('#이').css({opacity:0, visibility:'visible'}).delay(500).animate({opacity:1}, 1000);
 $('#선택지2').css({opacity:0, visibility:'visible','z-index':'2'}).delay(1500).animate({opacity:1}, 1000);
 $('#선택지3').css({opacity:0, visibility:'visible','z-index':'2'}).delay(1500).animate({opacity:1}, 1000);
@@ -39,14 +39,12 @@ $('#선택지3').css({opacity:0, visibility:'visible','z-index':'2'}).delay(1500
 <img src="./2.png" id="이" class="대화">
 <div  class="선택지"  id="선택지2" style="    top: 315px;
 left: 257px;"
-onclick="$('#대화2').css({visibility:'hidden'}).animate({opacity:0}, 1000);
-$('#대화1').css({opacity:0, visibility:'visible'}).animate({opacity:1}, 1000);
+onclick="$('#이,#선택지2,#선택지3').css({visibility:'hidden'}).animate({opacity:0}, 1000);
 $('#일').css({opacity:0, visibility:'visible'}).delay(500).animate({opacity:1}, 1000);
 $('#선택지1').css({opacity:0, visibility:'visible' ,'z-index':'2'}).delay(1500).animate({opacity:1}, 1000);">이전으로</div>
 <div  class="선택지"  id="선택지3" style="    top: 315px;
 left: 457px;"
-onclick="$('#대화2').css({visibility:'hidden'}).animate({opacity:0}, 1000);
-$('#대화3').css({opacity:0, visibility:'visible'}).animate({opacity:1}, 1000);
+onclick="$('#이,#선택지2,#선택지3').css({visibility:'hidden'}).animate({opacity:0}, 1000);
 $('#삼').css({opacity:0, visibility:'visible'}).delay(500).animate({opacity:1}, 1000);
 $('#선택지4').css({opacity:0, visibility:'visible','z-index':'2'}).delay(1500).animate({opacity:1}, 1000);
 $('#선택지5').css({opacity:0, visibility:'visible','z-index':'2'}).delay(1500).animate({opacity:1}, 1000);
@@ -60,15 +58,14 @@ $('#선택지5').css({opacity:0, visibility:'visible','z-index':'2'}).delay(1500
 <img src="./3.png" id="삼" class="대화" style="width:500px !important;">
 <div  class="선택지"  id="선택지4" style="    top: 315px;
 left: 257px;"
-onclick="$('#대화3').css({visibility:'hidden'}).animate({opacity:0}, 1000);
-$('#대화2').css({opacity:0, visibility:'visible'}).animate({opacity:1}, 1000);
+onclick="$('#삼,#선택지4,#선택지5').css({visibility:'hidden'}).animate({opacity:0}, 1000);
 $('#이').css({opacity:0, visibility:'visible'}).delay(500).animate({opacity:1}, 1000);
 $('#선택지2').css({opacity:0, visibility:'visible' ,'z-index':'2'}).delay(1500).animate({opacity:1}, 1000);
-$('#선택지3').css({opacity:0, visibility:'visible' ,'z-index':'2'}).delay(1500).animate({opacity:1}, 1000);">이전으로</div>
+$('#선택지3').css({opacity:0, visibility:'visible' ,'z-index':'2'}).delay(1500).animate({opacity:1}, 1000);
+">이전으로</div>
 <div  class="선택지"  id="선택지5" style="    top: 315px;
 left: 457px;"
-onclick="$('#대화3').css({visibility:'hidden'}).animate({opacity:0}, 1000);
-$('#대화4').css({opacity:0, visibility:'visible'}).animate({opacity:1}, 1000);
+onclick="$('#삼,#선택지4,#선택지5').css({visibility:'hidden'}).animate({opacity:0}, 1000);
 $('#사').css({opacity:0, visibility:'visible'}).delay(500).animate({opacity:1}, 1000);
 $('#선택지6').css({opacity:0, visibility:'visible','z-index':'2'}).delay(1500).animate({opacity:1}, 1000);
 ">다음으로</div>
@@ -83,8 +80,7 @@ $('#선택지6').css({opacity:0, visibility:'visible','z-index':'2'}).delay(1500
 <img src="./4.png" id="사" class="대화">
 <div  class="선택지"  id="선택지6" style="    top: 315px;
 left: 357px;"
-onclick="$('#대화4').css({visibility:'hidden'}).animate({opacity:0}, 1000);
-$('#대화3').css({opacity:0, visibility:'visible'}).animate({opacity:1}, 1000);
+onclick="$('#사,#선택지6').css({visibility:'hidden'}).animate({opacity:0}, 1000);
 $('#삼').css({opacity:0, visibility:'visible'}).delay(500).animate({opacity:1}, 1000);
 $('#선택지4').css({opacity:0, visibility:'visible','z-index':'2'}).delay(1500).animate({opacity:1}, 1000);
 $('#선택지5').css({opacity:0, visibility:'visible','z-index':'2'}).delay(1500).animate({opacity:1}, 1000);
@@ -96,6 +92,14 @@ window.open('about:blank','_self').self.close();
 
 
   <style>
+    body{
+ -ms-overflow-style: none;
+ }
+ 
+::-webkit-scrollbar {
+  display: none;
+}
+
     .말풍선 {
       text-align: center;
       width: 800px;
@@ -125,13 +129,6 @@ window.open('about:blank','_self').self.close();
     color: black
 }
 
-    body{
- -ms-overflow-style: none;
- }
- 
-::-webkit-scrollbar {
-  display: none;
-}
 
     .선택지 {
       
