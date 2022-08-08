@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>dialogue6</title>
+  <link rel="stylesheet" href="./style.css">
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://anseki.github.io/plain-draggable/js/libs-0c9dbba-210529120220.js"></script>
+  <script src="https://anseki.github.io/plain-draggable/js/bezier.min.js"></script>
+  <script src="https://anseki.github.io/plain-draggable/js/path-data-polyfill.js"></script>
+
+</head>
+
+<body onload="
+$('#대화1').css({visibility:'visible'}).animate({opacity:1}, 1000);
+ $('#일').css({opacity:0, visibility:'visible'}).delay(500).animate({opacity:1}, 1000);
+ $('#선택지1').css({opacity:0, visibility:'visible','z-index':'2'}).delay(1500).animate({opacity:1}, 1000);">
+
+
+  <div class="말풍선" id="대화1" >
+    <div style="width:800px;height:800px;padding-top:20%">
+<img src="./1.png" id="일" class="대화">
+<div  class="선택지"  id="선택지1" style="    top: 315px;
+left: 357px;"
+onclick="$('#일').css({visibility:'hidden'}).animate({opacity:0}, 1000);
+$('#선택지1').css({visibility:'hidden'}).animate({opacity:0}, 1000);
+$('#이').css({opacity:0, visibility:'visible'}).delay(500).animate({opacity:1}, 1000);
+$('#선택지2').css({opacity:0, visibility:'visible','z-index':'2'}).delay(1500).animate({opacity:1}, 1000);
+">다음으로</div>
+  </div>
+  </div>
+
+  <div class="말풍선" id="대화2" >
+    <div style="width:800px;height:800px;padding-top:20%">
+<img src="./2.png" id="이" class="대화">
+
+<div  class="선택지"  id="선택지2" style="    top: 315px; left: 357px;"
+onclick="$('#이,#선택지2').css({visibility:'hidden'}).animate({opacity:0}, 1000);
+$('#일').css({opacity:0, visibility:'visible'}).delay(500).animate({opacity:1}, 1000);
+$('#선택지1').css({opacity:0, visibility:'visible','z-index':'2'}).delay(1500).animate({opacity:1}, 1000);
+">이전으로</div>
+  </div>
+  </div>
+
+
+
+  <style>
+    body{
+ -ms-overflow-style: none;
+ }
+ 
+::-webkit-scrollbar {
+  display: none;
+}
+
+    .말풍선 {
+      text-align: center;
+      width: 800px;
+      height: 562px;
+      display: block;
+      background-size: cover;
+      background-image: url(./말풍선.png);
+    }
+
+    .속마음 {
+      background-size: cover;
+      background-image: url(./속마음.png);
+      width: 700px;
+      height: 700px;
+      display: block;
+      text-align: center;
+    }
+
+
+    .대화 {
+      text-align: center;
+    z-index: 4;
+    font-family: 폰트;
+    font-size: 23px;
+    margin: 0 auto;
+    width: fit-content;
+    color: black
+}
+
+
+    .선택지 {
+      
+    position: absolute;
+      color: black;
+      display: inline-block;
+      text-align: center;
+      background-size: cover;
+      background-image: url(./동그라미.png);
+      height: 24px;
+      width: 59px;
+      padding-top: 25px;
+      padding-bottom: 25px;
+      padding-left: 15px;
+      padding-right: 15px;
+      font-family: '폰트';
+      -webkit-animation-duration: 0.7s;
+      animation-duration: 0.7s;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
+      -webkit-animation-timing-function: ease-in-out;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      -webkit-animation-iteration-count: infinite;
+    }
+
+
+    .선택지:hover {
+      cursor: pointer;
+      
+    position: absolute;
+      animation-name: bounce;
+      -moz-animation-name: bounce;
+    }
+
+
+.대화{width : 600px;}
+
+    #대화1 {
+      visibility:hidden;
+      position: absolute;
+      top: 0px;
+    }
+
+    #대화2 {
+      visibility:hidden;
+      position: absolute;
+      top: 0px;
+    }
+
+    #대화3 {
+      visibility:hidden;
+      position: absolute;
+      top: 0px;
+    }
+
+    #대화4 {
+      visibility:hidden;
+      position: absolute;
+      top: 0px;
+    }
+
+    #대화5 {
+      visibility:hidden;
+      position: absolute;
+      top: 0px;
+    }
+    #대화6 {
+      visibility:hidden;
+      position: absolute;
+      top: 0px;
+    }
+    #대화7 {
+      visibility:hidden;
+      position: absolute;
+      top: 0px;
+    }
+    #대화8 {
+      visibility:hidden;
+      position: absolute;
+      top: 0px;
+    }
+    #대화9 {
+      visibility:hidden;
+      position: absolute;
+      top: 0px;
+    }
+    #대화10 {
+      visibility:hidden;
+      position: absolute;
+      top: 0px;
+    }
+    #사고 {
+      visibility:hidden;
+      position: absolute;
+      top: 0px;
+    }
+    #대화11 {
+      visibility:hidden;
+      position: absolute;
+      top: 0px;
+    }
+    #대화12 {
+      visibility:hidden;
+      position: absolute;
+      top: 0px;
+    }
+    #대화13 {
+      visibility:hidden;
+      position: absolute;
+      top: 0px;
+    }
+
+    @font-face {
+      font-family: '폰트';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoDPPA.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @keyframes bounce {
+
+      0%,
+      100%,
+      20%,
+      50%,
+      80% {
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0)
+      }
+
+      40% {
+        -webkit-transform: translateY(-15px);
+        -ms-transform: translateY(-15px);
+        transform: translateY(-15px)
+      }
+
+      60% {
+        -webkit-transform: translateY(-8px);
+        -ms-transform: translateY(-8px);
+        transform: translateY(-8px)
+      }
+    }
+  </style>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script src="./script.js"></script>
+  <script>
+
+    var opena = 0;
+    openb = 0;
+
+
+  </script>
+</body>
+
+</html>
